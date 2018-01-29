@@ -1,0 +1,14 @@
+.tiles {
+    display: flex;
+
+    .topic {
+        margin: 5px;
+        text-align: center;
+        width: calc((100%/3) - 10px);
+    }
+}
+
+.reset {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,14 @@
+<div class="tile">
+  <div class="points" *ngIf="status === 0">
+    ${{ points }}
+  </div>
+  <div class="question" *ngIf="status === 1">
+    {{ prompt }}
+  </div>
+  <div class="answer" *ngIf="status === 2">
+    {{ answer }}
+  </div>
+  <div class="facts" *ngIf="status === 3">
+    {{ facts }}
+  </div>
+</div>
