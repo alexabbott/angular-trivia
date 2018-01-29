@@ -1,6 +1,10 @@
-# Jeopardy
+# Angular Jeopardy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+A simple trivia application, based on Jeopardy, built with Angular 5. Front-end only, using localStorage to save game state.
+
+## Installation
+
+Run `npm install`
 
 ## Development server
 
