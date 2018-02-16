@@ -1,14 +1,11 @@
-<div class="tile">
-  <div class="points" *ngIf="status === 0">
-    ${{ points }}
-  </div>
-  <div class="question" *ngIf="status === 1">
-    {{ prompt }}
-  </div>
-  <div class="answer" *ngIf="status === 2">
-    {{ answer }}
-  </div>
-  <div class="facts" *ngIf="status === 3">
-    {{ facts }}
-  </div>
+<div class="tile" [ngClass]="{ 'expanded': [1,2,3].includes(status), 'trends': topic === 'trends', 'history': topic === 'history', 'food': topic === 'food' }">
+  <span *ngIf="status !== 4">
+    <div class="points" *ngIf="status === 0">
+      {{ points }}
+    </div>
+    <div class="question" *ngIf="status === 1" [innerHTML]="prompt"></div>
+    <div class="answer" *ngIf="status === 2" [innerHTML]="answer"></div>
+    <div class="facts" *ngIf="status === 3" [innerHTML]="facts"></div>
+  </span>
+  <img src="../../assets/dog-{{ dog }}.png" class="dog" *ngIf="status === 4">
 </div>

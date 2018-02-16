@@ -1,14 +1,19 @@
-<main class="tiles">
-  <div class="topic" *ngFor="let item of questions; let i = index;">
-    <h2>{{ item.topic }}</h2>
-    <tile
-      *ngFor="let question of item.questions; let q = index;"
-      [points]="question.points"
-      [prompt]="question.prompt"
-      [answer]="question.answer"
-      [facts]="question.facts"
-      [status]="question.status"
-      (click)="questionService.updateStatus(i, q, questions)"></tile>
+<main>
+  <img src="../assets/title.png" class="title">
+  <div class="tiles">
+    <div class="topic" *ngFor="let item of questions; let i = index;">
+      <h1>{{ item.topic }}</h1>
+      <tile
+        *ngFor="let question of item.questions; let q = index;"
+        [points]="question.points"
+        [prompt]="question.prompt"
+        [answer]="question.answer"
+        [facts]="question.facts"
+        [status]="question.status"
+        [topic]="question.topic"
+        [dog]="question.dog"
+        (click)="questionService.updateStatus(i, q, questions)"></tile>
+    </div>
   </div>
+  <button class="reset" (click)="reset()">Reset</button>
 </main>
-<button class="reset" (click)="reset()">Reset</button>

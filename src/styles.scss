@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    padding: 1%;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p,
+ul {
+    font-size: 1.5em;
+}
+
+.answer {
+    text-align: center;
+
+    ul {
+        text-align: left;
+    }
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}

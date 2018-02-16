@@ -11,6 +11,8 @@ export class TileComponent implements OnInit {
   @Input('answer') answer: string;
   @Input('facts') facts: string;
   @Input('status') status: number;
+  @Input('topic') topic: string;
+  @Input('dog') dog: number;
 
   constructor() { }
 
